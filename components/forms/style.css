@@ -1,0 +1,160 @@
+/* General Reset */
+@font-face {
+    font-family: itc;
+    src: url(/font/ITCBenguiatStdBoldCn.OTF);
+}
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar{ 
+    display: none;
+}
+
+/* Main Container */
+#main {
+    width: 100vw;
+    height: fit-content;
+    background-color: whitesmoke;
+}
+
+header { 
+     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f3f3f3;
+    font-family: "Italiana", sans-serif;
+    font-size: 25px;
+    box-shadow: 10px 0px 25px grey; 
+   
+}
+
+#extra {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    width: 40vw;
+    height: 100vh;
+    background-color: #71383D;
+    /* box-shadow: 10px 0px 25px grey; */
+}
+
+
+.box {
+    width: 14vw;
+    height: 40vh;
+    background-color: grey;
+    overflow: hidden;
+    margin-left: 40%;
+    margin-top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Styles */
+.form {
+    width: 50vw;
+   
+    padding: 40px;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #0d0d0d;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    margin-top: 5px;
+    color: #333;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 63, 63, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #71383D;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(63, 63, 63, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form {
+        width: 80vw;
+        padding: 20px;
+    }
+
+    #extra{ 
+        flex-direction: column;
+    }
+    .border{ 
+        display: none ;
+    }
+    header{ 
+        position: fixed;
+    }
+    header h1{ 
+        font-size: 30px;
+    }
+    .form{ 
+        width: 90vw;
+    }
+}
